@@ -1,0 +1,12 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.techstack.android.coordinatorlayout.custom"
+    }
+}
+
+dependencies {
+    implementation COORDINATOR_LAYOUT
+    implementation RECYCLER_VIEW
+}

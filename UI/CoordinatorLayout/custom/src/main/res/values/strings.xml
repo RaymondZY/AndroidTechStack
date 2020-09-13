@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CoordinatorLayout.Custom</string>
+    <string name="item_view_text">Position %d</string>
+</resources>

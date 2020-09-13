@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Base" />
+
+    <TextView
+        android:id="@+id/textView_verticalMirror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vertical"
+        app:layout_behavior="zhaoyun.techstack.android.coordinatorlayout.custom.behavior.VerticalMirrorBehavior" />
+
+    <TextView
+        android:id="@+id/textView_horizontalMirror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horizontal"
+        app:layout_behavior="zhaoyun.techstack.android.coordinatorlayout.custom.behavior.HorizontalMirrorBehavior" />
+
+    <TextView
+        android:id="@+id/textView_diagonalMirror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diagonal"
+        app:layout_behavior="zhaoyun.techstack.android.coordinatorlayout.custom.behavior.DiagonalMirrorBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

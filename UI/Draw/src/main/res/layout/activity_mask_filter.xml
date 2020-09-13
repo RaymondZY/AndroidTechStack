@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".maskfilter.MaskFilterActivity">
+
+    <zhaoyun.techstack.android.draw.maskfilter.MaskFilterView
+        android:id="@+id/maskFilterView_normal"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        app:blur_value="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <zhaoyun.techstack.android.draw.maskfilter.MaskFilterView
+        android:id="@+id/maskFilterView_solid"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        app:blur_value="1"
+        app:layout_constraintStart_toEndOf="@id/maskFilterView_normal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <zhaoyun.techstack.android.draw.maskfilter.MaskFilterView
+        android:id="@+id/maskFilterView_outer"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        app:blur_value="2"
+        app:layout_constraintStart_toEndOf="@+id/maskFilterView_solid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <zhaoyun.techstack.android.draw.maskfilter.MaskFilterView
+        android:id="@+id/maskFilterView_inner"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        app:blur_value="3"
+        app:layout_constraintStart_toEndOf="@id/maskFilterView_outer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Normal"
+        app:layout_constraintEnd_toEndOf="@id/maskFilterView_normal"
+        app:layout_constraintStart_toStartOf="@id/maskFilterView_normal"
+        app:layout_constraintTop_toBottomOf="@id/maskFilterView_normal" />
+
+    <TextView
+        android:id="@+id/textView_solid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Solid"
+        app:layout_constraintEnd_toEndOf="@id/maskFilterView_solid"
+        app:layout_constraintStart_toStartOf="@id/maskFilterView_solid"
+        app:layout_constraintTop_toBottomOf="@id/maskFilterView_solid" />
+
+    <TextView
+        android:id="@+id/textView_outer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Outer"
+        app:layout_constraintEnd_toEndOf="@id/maskFilterView_outer"
+        app:layout_constraintStart_toStartOf="@id/maskFilterView_outer"
+        app:layout_constraintTop_toBottomOf="@id/maskFilterView_outer" />
+
+    <TextView
+        android:id="@+id/textView_inner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Inner"
+        app:layout_constraintEnd_toEndOf="@id/maskFilterView_inner"
+        app:layout_constraintStart_toStartOf="@id/maskFilterView_inner"
+        app:layout_constraintTop_toBottomOf="@id/maskFilterView_inner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.techstack.android.contentprovider.observer"
+
+        def authorities = "zhaoyun.techstack.android.contentprovider.provider"
+        buildConfigField 'String', 'AUTHORITIES', '"' + authorities + '"'
+        manifestPlaceholders = [PROVIDER_AUTHORITIES : authorities]
+    }
+}
+
+
+dependencies {
+    implementation RECYCLER_VIEW
+}

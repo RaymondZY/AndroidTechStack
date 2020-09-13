@@ -1,0 +1,16 @@
+apply from: rootProject.file('library.gradle')
+
+android {
+    buildTypes {
+        debug {
+            buildConfigField("boolean", "IS_MODULAR", "$isModular")
+        }
+        release {
+            buildConfigField("boolean", "IS_MODULAR", "$isModular")
+        }
+    }
+}
+
+dependencies {
+    implementation project(":Topic:Modular:router-annotation")
+}

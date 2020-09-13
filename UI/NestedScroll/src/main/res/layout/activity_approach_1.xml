@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zhaoyun.techstack.android.view.nestedscroll.approach1.ContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".approach1.Approach1Activity">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ad_text"
+        android:background="@android:color/holo_green_light"
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        tools:listitem="@layout/item_view" />
+
+</zhaoyun.techstack.android.view.nestedscroll.approach1.ContainerView>

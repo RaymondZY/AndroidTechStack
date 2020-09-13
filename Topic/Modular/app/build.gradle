@@ -1,0 +1,24 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [module: project.name]
+            }
+        }
+    }
+
+    resourcePrefix "${project.name}_"
+}
+
+dependencies {
+    implementation project(":Topic:Modular:common")
+    implementation project(':Topic:Modular:router-annotation')
+    annotationProcessor project(':Topic:Modular:router-processor')
+
+    if (!isModular) {
+        implementation project(":Topic:Modular:order")
+        implementation project(":Topic:Modular:personal")
+    }
+}

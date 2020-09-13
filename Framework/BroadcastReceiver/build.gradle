@@ -1,0 +1,7 @@
+ext {
+    broadcastParams = [
+            senderPermission : 'zhaoyun.techstack.android.broadcastreceiver.sender.PERMISSION',
+            receiverPermission : 'zhaoyun.techstack.android.broadcastreceiver.receiver.PERMISSION',
+            action : 'zhaoyun.techstack.android.broadcastreceiver.ACTION'
+    ]
+}

@@ -1,0 +1,12 @@
+ext {
+
+    isModular = false
+
+    androidConfig = [
+            applicationId      : [
+                    app     : "zhaoyun.teckstack.android.modular",
+                    order   : "zhaoyun.teckstack.android.modular.order",
+                    personal: "zhaoyun.teckstack.android.modular.personal"
+            ],
+    ]
+}

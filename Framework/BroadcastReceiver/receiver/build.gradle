@@ -1,0 +1,18 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.techstack.android.broadcastreceiver.receiver"
+
+        def broadcastParams = project(':Framework:BroadcastReceiver').ext.broadcastParams
+        buildConfigField 'String', 'BROADCAST_ACTION', '"' + broadcastParams.action + '"'
+        buildConfigField 'String', 'BROADCAST_SENDER_PERMISSION', '"' + broadcastParams.senderPermission + '"'
+        buildConfigField 'String', 'BROADCAST_RECEIVER_PERMISSION', '"' + broadcastParams.receiverPermission + '"'
+        manifestPlaceholders = [
+                BROADCAST_ACTION : broadcastParams.action,
+                BROADCAST_SENDER_PERMISSION : broadcastParams.senderPermission,
+                BROADCAST_RECEIVER_PERMISSION : broadcastParams.receiverPermission
+        ]
+    }
+}
+

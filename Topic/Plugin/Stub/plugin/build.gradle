@@ -1,0 +1,11 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.teckstack.android.plugin.stub.plugin"
+    }
+}
+
+dependencies {
+    implementation project(':Topic:Plugin:Stub:plugin-library')
+}

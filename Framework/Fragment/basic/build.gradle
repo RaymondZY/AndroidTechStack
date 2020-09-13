@@ -1,0 +1,12 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.techstack.android.fragment"
+    }
+}
+
+
+dependencies {
+    implementation RECYCLER_VIEW
+}

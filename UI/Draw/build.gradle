@@ -1,0 +1,12 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.techstack.android.draw"
+
+    }
+}
+
+dependencies {
+    implementation 'me.jessyan:autosize:1.1.2'
+}

@@ -1,0 +1,32 @@
+//noinspection GroovyConditionalWithIdenticalBranches
+if (isModular) {
+    apply from: rootProject.file('app.gradle')
+} else {
+    apply from: rootProject.file('library.gradle')
+}
+
+android {
+
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [module: project.name]
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            if (isModular) {
+                manifest.srcFile "src/main/debug/AndroidManifest.xml"
+            } else {
+                manifest.srcFile "src/main/AndroidManifest.xml"
+            }
+            java {
+                exclude "**/debug/**"
+            }
+        }
+    }
+
+    resourcePrefix "${project.name}_"
+}

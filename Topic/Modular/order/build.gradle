@@ -1,0 +1,15 @@
+apply from: project(':Topic:Modular').file('module.gradle')
+
+def androidConfig = project(':Topic:Modular').ext.androidConfig
+
+android {
+    defaultConfig {
+        applicationId isModular ? androidConfig.applicationId.order : null
+    }
+}
+
+dependencies {
+    implementation project(":Topic:Modular:common")
+    implementation project(':Topic:Modular:router-annotation')
+    annotationProcessor project(':Topic:Modular:router-processor')
+}

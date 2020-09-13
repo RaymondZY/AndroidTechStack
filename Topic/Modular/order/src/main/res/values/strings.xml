@@ -1,0 +1,4 @@
+<resources>
+    <string name="order_app_name">Order</string>
+    <string name="order_text">OrderMainActivity</string>
+</resources>

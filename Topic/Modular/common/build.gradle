@@ -1,0 +1,5 @@
+apply from: rootProject.file('library.gradle')
+
+dependencies {
+    api project(":Topic:Modular:router-api")
+}

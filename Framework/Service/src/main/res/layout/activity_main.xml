@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_start_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_service"/>
+
+    <Button
+        android:id="@+id/button_stop_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Stop"
+        app:layout_constraintStart_toEndOf="@+id/button_start_service"
+        app:layout_constraintTop_toTopOf="@+id/button_start_service"/>
+
+    <TextView
+        android:id="@+id/textView_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Intent Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_service"/>
+
+    <Button
+        android:id="@+id/button_start_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_intent_service"/>
+
+    <Button
+        android:id="@+id/button_stop_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Stop"
+        app:layout_constraintStart_toEndOf="@+id/button_start_intent_service"
+        app:layout_constraintTop_toTopOf="@+id/button_start_intent_service"/>
+
+    <TextView
+        android:id="@+id/textView_job_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Job Intent Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_intent_service"/>
+
+    <Button
+        android:id="@+id/button_start_job_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_job_intent_service"/>
+
+    <Button
+        android:id="@+id/button_stop_job_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Stop"
+        app:layout_constraintStart_toEndOf="@+id/button_start_job_intent_service"
+        app:layout_constraintTop_toTopOf="@+id/button_start_job_intent_service" />
+
+    <TextView
+        android:id="@+id/textView_bound_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Local Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_job_intent_service"/>
+
+    <Button
+        android:id="@+id/button_bind_local_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Bind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_bound_service"/>
+
+    <Button
+        android:id="@+id/button_unbind_local_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Unbind"
+        app:layout_constraintStart_toEndOf="@+id/button_bind_local_service"
+        app:layout_constraintTop_toTopOf="@+id/button_bind_local_service"/>
+
+    <Button
+        android:id="@+id/button_local_service_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Operation"
+        app:layout_constraintStart_toEndOf="@+id/button_unbind_local_service"
+        app:layout_constraintTop_toTopOf="@+id/button_unbind_local_service"/>
+
+    <TextView
+        android:id="@+id/textView_messenger_remote_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Messenger Remote Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_bind_local_service"/>
+
+    <Button
+        android:id="@+id/button_bind_messenger_remote_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Bind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_messenger_remote_service"/>
+
+    <Button
+        android:id="@+id/button_unbind_messenger_remote_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Unbind"
+        app:layout_constraintStart_toEndOf="@+id/button_bind_messenger_remote_service"
+        app:layout_constraintTop_toTopOf="@+id/button_bind_messenger_remote_service"/>
+
+    <Button
+        android:id="@+id/button_messenger_remote_service_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:text="Operation"
+        app:layout_constraintStart_toEndOf="@+id/button_unbind_messenger_remote_service"
+        app:layout_constraintTop_toTopOf="@+id/button_unbind_messenger_remote_service"/>
+
+    <TextView
+        android:id="@+id/textView_aidl_remote_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Aidl Remote Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_bind_messenger_remote_service"/>
+
+    <Button
+        android:id="@+id/button_bind_aidl_remote_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Bind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_aidl_remote_service"/>
+
+    <Button
+        android:id="@+id/button_unbind_aidl_remote_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Unbind"
+        app:layout_constraintStart_toEndOf="@+id/button_bind_aidl_remote_service"
+        app:layout_constraintTop_toTopOf="@+id/button_bind_aidl_remote_service"/>
+
+    <Button
+        android:id="@+id/button_aidl_remote_service_async_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Async"
+        app:layout_constraintStart_toEndOf="@+id/button_unbind_aidl_remote_service"
+        app:layout_constraintTop_toTopOf="@+id/button_unbind_aidl_remote_service"/>
+
+    <Button
+        android:id="@+id/button_aidl_remote_service_sync_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Sync"
+        app:layout_constraintStart_toEndOf="@+id/button_aidl_remote_service_async_operation"
+        app:layout_constraintTop_toTopOf="@+id/button_aidl_remote_service_async_operation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

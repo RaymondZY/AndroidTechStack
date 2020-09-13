@@ -1,0 +1,11 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.techstack.android.contentprovider.provider"
+
+        def authorities = applicationId
+        buildConfigField 'String', 'AUTHORITIES', '"' + authorities + '"'
+        manifestPlaceholders = [PROVIDER_AUTHORITIES: authorities]
+    }
+}

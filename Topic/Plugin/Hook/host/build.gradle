@@ -1,0 +1,11 @@
+apply from: rootProject.file('app.gradle')
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.teckstack.android.plugin.hook.host"
+    }
+}
+
+dependencies {
+    implementation project(':Topic:Plugin:Hook:plugin-library')
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NestedScroll</string>
+    <string name="ad_text">我是一行广告</string>
+</resources>
