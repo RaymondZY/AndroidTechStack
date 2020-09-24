@@ -34,6 +34,7 @@
             <option value="$PROJECT_DIR$/Framework/SharedPreferences" />
             <option value="$PROJECT_DIR$/Library" />
             <option value="$PROJECT_DIR$/Library/DataBinding" />
+            <option value="$PROJECT_DIR$/Library/Fresco" />
             <option value="$PROJECT_DIR$/Topic" />
             <option value="$PROJECT_DIR$/Topic/IPC" />
             <option value="$PROJECT_DIR$/Topic/Modular" />

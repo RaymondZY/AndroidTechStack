@@ -37,6 +37,7 @@ dependencies {
     implementation CARD_VIEW
     implementation COORDINATOR_LAYOUT
     implementation VIEW_PAGER_2
+    implementation FRESCO
 
     testImplementation JUNIT
 
