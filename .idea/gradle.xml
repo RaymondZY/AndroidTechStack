@@ -36,6 +36,8 @@
             <option value="$PROJECT_DIR$/Library/DataBinding" />
             <option value="$PROJECT_DIR$/Library/Fresco" />
             <option value="$PROJECT_DIR$/Topic" />
+            <option value="$PROJECT_DIR$/Topic/Arch" />
+            <option value="$PROJECT_DIR$/Topic/Arch/Mvvm" />
             <option value="$PROJECT_DIR$/Topic/IPC" />
             <option value="$PROJECT_DIR$/Topic/Modular" />
             <option value="$PROJECT_DIR$/Topic/Modular/app" />

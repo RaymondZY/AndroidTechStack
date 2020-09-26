@@ -38,6 +38,8 @@ dependencies {
     implementation COORDINATOR_LAYOUT
     implementation VIEW_PAGER_2
     implementation FRESCO
+    implementation RXJAVA
+    implementation RXJAVA_ANDROID
 
     testImplementation JUNIT
 

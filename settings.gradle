@@ -31,6 +31,7 @@ include ':Topic:Modular:router-annotation'
 include ':Topic:Modular:router-api'
 include ':Topic:Modular:router-processor'
 include ':Topic:IPC'
+include ':Topic:Arch:Mvvm'
 
 include ':UI:Bitmap'
 include ':UI:Animation'
