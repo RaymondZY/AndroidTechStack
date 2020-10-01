@@ -1,5 +1,8 @@
-include ':Dependency'
 rootProject.name = "AndroidTechStack"
+
+include ':Dependency'
+
+include ':Kotlin'
 
 include ':Framework:Service'
 include ':Framework:Handler'
