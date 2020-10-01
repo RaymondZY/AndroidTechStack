@@ -2,6 +2,8 @@ rootProject.name = "AndroidTechStack"
 
 include ':Dependency'
 
+include ':Algorithm'
+include ':Java'
 include ':Kotlin'
 
 include ':Framework:Service'
