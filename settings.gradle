@@ -68,3 +68,4 @@ include ':UI:Draw'
 
 include ':Library:DataBinding'
 include ':Library:Fresco'
+include ':Library:Rxjava'

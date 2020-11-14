@@ -1,8 +1,8 @@
 //noinspection GroovyConditionalWithIdenticalBranches
 if (isModular) {
-    apply from: rootProject.file('app.gradle')
+    apply from: rootProject.file('scripts/gradle/android_application.gradle')
 } else {
-    apply from: rootProject.file('library.gradle')
+    apply from: rootProject.file('scripts/gradle/android_library.gradle')
 }
 
 android {
