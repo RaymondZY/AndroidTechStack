@@ -37,6 +37,8 @@ include ':Topic:Modular:router-api'
 include ':Topic:Modular:router-processor'
 include ':Topic:IPC'
 include ':Topic:Arch:Mvvm'
+include ':Topic:Transform:Plugin'
+include ':Topic:Transform:Test'
 
 include ':UI:Bitmap'
 include ':UI:Animation'

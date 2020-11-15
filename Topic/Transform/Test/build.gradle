@@ -1,0 +1,20 @@
+apply from: rootProject.file("scripts/gradle/android_application.gradle")
+
+android {
+    defaultConfig {
+        applicationId "zhaoyun.techstack.android.transform.test"
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url rootProject.file("./build")
+        }
+    }
+    dependencies {
+        classpath 'zhaoyun.techstack.android.transform:transform-plugin:1.0.0'
+    }
+}
+
+apply plugin: 'transform-plugin'
