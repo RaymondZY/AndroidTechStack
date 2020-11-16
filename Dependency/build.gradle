@@ -29,6 +29,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation CORE_KTX
     implementation APPCOMPAT
     implementation CONSTRAINT_LAYOUT
     implementation RECYCLER_VIEW
