@@ -13,6 +13,8 @@ private object ClassPlayground {
         playWithGetterAndSetter()
         playWithDataClass()
         playWithBy()
+        playWithLateInit()
+        playWithByLazy()
     }
 
     // public是默认可见性，可以省略
@@ -33,7 +35,7 @@ private object ClassPlayground {
     }
 
     private fun playWithClass() {
-        println("ClassPlayGround.playWithClass()")
+        println("ClassPlayground.playWithClass()")
 
         val student = Student("zhaoyun")
         println(student)
@@ -70,7 +72,7 @@ private object ClassPlayground {
     }
 
     private fun playWithInnerClass() {
-        println("ClassPlayGround.playWithInnerClass()")
+        println("ClassPlayground.playWithInnerClass()")
 
         OuterClass().InnerClass().playWithInnerClass()
         OuterClass.NestedClass().playWithNestedClass()
@@ -92,7 +94,7 @@ private object ClassPlayground {
     }
 
     private fun playWithCustomGet() {
-        println("ClassPlayGround.playWithCustomGet()")
+        println("ClassPlayground.playWithCustomGet()")
 
         val rectangle = Rectangle(4, 4)
         // 会调用两次get()方法
@@ -114,7 +116,7 @@ private object ClassPlayground {
     }
 
     private fun playWithGetterAndSetter() {
-        println("ClassPlayGround.playWithGetterAndSetter()")
+        println("ClassPlayground.playWithGetterAndSetter()")
 
         val zhaoyun = User("zhaoyun")
         zhaoyun.address = "YaSong"
@@ -124,7 +126,7 @@ private object ClassPlayground {
     private data class DataClass(val name: String, val age: Int, val isMarried: Boolean)
 
     private fun playWithDataClass() {
-        println("ClassPlayGround.playWithDataClass()")
+        println("ClassPlayground.playWithDataClass()")
 
         val zhaoyun = DataClass("zhaoyun", 30, true)
         val zhaoyun2 = DataClass("zhaoyun", 30, true)
@@ -140,10 +142,67 @@ private object ClassPlayground {
     ) : Collection<T> by innerList
 
     private fun playWithBy() {
-        println("ClassPlayGround.playWithBy()")
+        println("ClassPlayground.playWithBy()")
 
         val delegatingCollection = DelegatingCollection(arrayListOf("a", "b", "c"))
         println("delegatingCollection.size = ${delegatingCollection.size}")
         delegatingCollection.forEach(::println)
+    }
+
+    private class LateInitClass {
+        lateinit var string: String
+        // 这两种情况无法编译
+        // lateinit var value: Int
+        // lateinit val value: String
+
+        fun init() {
+            string = "blablabla"
+        }
+
+        fun print() {
+            println(string)
+        }
+    }
+
+    private fun playWithLateInit() {
+        println("ClassPlayground.playWithLateInit()")
+        LateInitClass().also {
+            // 在初始化之前调用会触发异常
+            // kotlin.UninitializedPropertyAccessException:
+            // lateinit property string has not been initialized
+            // it.print()
+            it.init()
+            it.print()
+        }
+    }
+
+    private class ByLazyClass {
+        // 不同于lateinit
+        // by lazy 可以定义Int和val
+        private val i: Int by lazy {
+            0
+        }
+        private val string: String by lazy {
+            // 只会调用一次
+            println("string initialized")
+            "blablabla"
+        }
+
+        init {
+            // 并且此时也能调用
+            println(string)
+        }
+
+        fun print() {
+            println(string)
+        }
+    }
+
+
+    private fun playWithByLazy() {
+        println("ClassPlayground.playWithLateInit()")
+        ByLazyClass().also {
+            it.print()
+        }
     }
 }

@@ -33,7 +33,7 @@ private object LambdaPlayground {
     }
 
     private fun playWithMap() {
-        println("LambdaPlayGround.playWithMap()")
+        println("LambdaPlayground.playWithMap()")
         val people = listOf(
             Person("Alice", 21),
             Person("Bob", 23)
@@ -47,7 +47,7 @@ private object LambdaPlayground {
     private class Book(val authors: List<String>)
 
     private fun playWithFlatMap() {
-        println("LambdaPlayGround.playWithFlatMap()")
+        println("LambdaPlayground.playWithFlatMap()")
         val books = listOf(
             Book(listOf("Jasper Fforde")),
             Book(listOf("Terry Pratchett")),
@@ -58,7 +58,7 @@ private object LambdaPlayground {
     }
 
     private fun playWithFlatten() {
-        println("LambdaPlayGround.playWithFlatten()")
+        println("LambdaPlayground.playWithFlatten()")
         val listOfLists = listOf(
             listOf("a", "b", "c"),
             listOf("1", "2", "3"),
@@ -68,7 +68,7 @@ private object LambdaPlayground {
     }
 
     private fun playWithFilter() {
-        println("LambdaPlayGround.playWithFilter()")
+        println("LambdaPlayground.playWithFilter()")
         val people = listOf(
             Person("Alice", 21),
             Person("Bob", 23)
@@ -80,7 +80,7 @@ private object LambdaPlayground {
     private data class Person(var name: String, var age: Int = 0)
 
     private fun playWithMaxBy() {
-        println("LambdaPlayGround.playWithMaxBy()")
+        println("LambdaPlayground.playWithMaxBy()")
         val personList = listOf(
             Person("zhaoyun", 30),
             Person("xuxu", 9),
@@ -90,7 +90,7 @@ private object LambdaPlayground {
     }
 
     private fun playWithSequence() {
-        println("LambdaPlayGround.playWithSequence()")
+        println("LambdaPlayground.playWithSequence()")
         val bigPersonList = ArrayList<Person>()
         for (i in 0..100000) {
             bigPersonList.add(Person("person $i"))
@@ -116,7 +116,7 @@ private object LambdaPlayground {
     }
 
     private fun playWithWith() {
-        println("LambdaPlayGround.playWithWith()")
+        println("LambdaPlayground.playWithWith()")
         val zhaoyun = Person("zhaoyun", 30)
         with(zhaoyun) {
             name = "zhaoyun31"
@@ -126,7 +126,7 @@ private object LambdaPlayground {
     }
 
     private fun playWithApply() {
-        println("LambdaPlayGround.playWithApply()")
+        println("LambdaPlayground.playWithApply()")
         val zhaoyun = Person("zhaoyun", 30)
         zhaoyun.apply {
             name = "zhaoyun31"
