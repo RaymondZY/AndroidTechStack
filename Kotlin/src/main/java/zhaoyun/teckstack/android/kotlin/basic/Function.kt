@@ -2,6 +2,7 @@ package zhaoyun.teckstack.android.kotlin.basic
 
 fun main() {
     FunctionPlayground.play()
+    HighOrderFunctionPlayground.play()
 }
 
 private object FunctionPlayground {
@@ -42,7 +43,8 @@ private object FunctionPlayground {
 
     private class SomeClass(var text: String)
 
-    private fun SomeClass.extensionFunction() = println("This is a extension function for ${this.text}")
+    private fun SomeClass.extensionFunction() =
+        println("This is a extension function for ${this.text}")
 
     private fun playWithFunctionExtension() {
         println("FunctionPlayground.playWithFunctionExtension()")
@@ -51,5 +53,40 @@ private object FunctionPlayground {
         value.extensionFunction()
     }
 
+}
+
+private object HighOrderFunctionPlayground {
+
+    fun play() {
+        playWithHighOrderFunction()
+        playWithCurryingLikeFunction()
+    }
+
+    private fun createAddFunction(offset: Int) = { input: Int -> offset + input }
+
+    // 与上面的函数是等价的
+    // 上面的函数是一种简写
+    private fun createAddFunction2(offset: Int): (Int) -> Int {
+        return { input: Int -> offset + input }
+    }
+
+    private fun playWithHighOrderFunction() {
+        println("HighOrderFunctionPlayground.playWithHighOrderFunction()")
+        val function = createAddFunction(offset = 5)
+        println(function(1))
+    }
+
+    private fun curryingLikeFunction(firstValue: Int) = { secondValue: Int ->
+        { thirdValue: Int ->
+            {
+                firstValue + secondValue + thirdValue
+            }
+        }
+    }
+
+    private fun playWithCurryingLikeFunction() {
+        println("HighOrderFunctionPlayground.playWithCurryingLikeFunction()")
+        println(curryingLikeFunction(1)(2)(3))
+    }
 }
 
