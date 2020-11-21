@@ -100,6 +100,7 @@ private object VariablePlayground {
         // 这两种情况无法编译
         // lateinit var value: Int
         // lateinit val value: String
+        // 可以使用：var value by Delegates。notNull<Int>()代替lateinit var value: Int
 
         fun init() {
             string = "blablabla"
