@@ -1,12 +1,12 @@
 package zhaoyun.teckstack.android.kotlin.`class`
 
 fun main() {
-    ClassPlayground.play()
+    ClassPlayground.playHearthStone()
 }
 
 private object ClassPlayground {
 
-    fun play() {
+    fun playHearthStone() {
         playWithClass()
         playWithInnerClass()
         playWithDataClass()
@@ -103,16 +103,38 @@ private object ClassPlayground {
 
     //region by
 
-    private class DelegatingCollection<T>(
-        private val innerList: Collection<T>
-    ) : Collection<T> by innerList
+    private interface HearthStonePlayer {
+        fun playHearthStone()
+    }
+
+    private interface Programmer {
+        fun debug()
+    }
+
+    open class LegendHearthStonePlayer : HearthStonePlayer {
+        override fun playHearthStone() {
+            println("I am playing HearthStone in the legend rank.")
+        }
+    }
+
+    open class NewbieProgrammer : Programmer {
+        override fun debug() {
+            println("Shit happens!! : (")
+        }
+    }
+
+    class Zhaoyun(player: LegendHearthStonePlayer, programmer: NewbieProgrammer) :
+        HearthStonePlayer by player, Programmer by programmer
 
     private fun playWithBy() {
         println("ClassPlayground.playWithBy()")
 
-        val delegatingCollection = DelegatingCollection(arrayListOf("a", "b", "c"))
-        println("delegatingCollection.size = ${delegatingCollection.size}")
-        delegatingCollection.forEach(::println)
+        // 可以by和组合的方式实现类似多继承
+        val player = LegendHearthStonePlayer()
+        val programmer = NewbieProgrammer()
+        val zhaoyun = Zhaoyun(player, programmer)
+        zhaoyun.playHearthStone()
+        zhaoyun.debug()
     }
 
     //endregion by
