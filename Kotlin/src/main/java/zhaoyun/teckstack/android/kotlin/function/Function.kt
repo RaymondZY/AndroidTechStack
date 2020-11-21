@@ -9,6 +9,7 @@ private object FunctionPlayground {
     fun play() {
         playWithFunction()
         playWithFunctionExtension()
+        playWithInfixFunction()
     }
 
     //region function
@@ -46,19 +47,38 @@ private object FunctionPlayground {
 
     //region function extension
 
-    private class SomeClass(var text: String)
+    private class ExtensionClass(var text: String)
 
-    private fun SomeClass.extensionFunction() =
+    private fun ExtensionClass.extensionFunction() =
         println("This is a extension function for ${this.text}")
 
     private fun playWithFunctionExtension() {
         println("FunctionPlayground.playWithFunctionExtension()")
 
-        val value = SomeClass("foo")
+        val value = ExtensionClass("extension class")
         value.extensionFunction()
     }
 
     //endregion function extension
+
+    //region infix function
+
+    class Person(var name: String)
+
+    infix fun Person.playWith(somebody: Person) {
+        println("${this.name} is playing with ${somebody.name}")
+    }
+
+    private fun playWithInfixFunction() {
+        println("FunctionPlayground.playWithInfixFunction()")
+
+        val zhaoyun = Person("zhaoyun")
+        val maodou = Person("maodou")
+
+        zhaoyun playWith maodou
+    }
+
+    //endregion infix function
 }
 
 
