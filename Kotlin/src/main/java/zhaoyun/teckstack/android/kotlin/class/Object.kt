@@ -1,4 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
+package zhaoyun.teckstack.android.kotlin.`class`
 
 fun main() {
     ObjectPlayground.play()
@@ -12,6 +12,8 @@ private object ObjectPlayground {
         playWithAnonymousClass()
     }
 
+    //region object单例
+
     private object SingletonObject {
 
         fun sayHello() = println("Hello, I am $this")
@@ -21,14 +23,21 @@ private object ObjectPlayground {
     private fun playWithSingleton() {
         println("ObjectPlayground.playWithSingleton()")
 
+        // 指向的同一个对象
         val object1 = SingletonObject
         val object2 = SingletonObject
         object1.sayHello()
         object2.sayHello()
     }
 
+    //endregion object单例
+
+    //region companion object简单工厂
+
+    // 实现一个private修饰的构造方法
     private class PrivateConstructorClass private constructor(private val name: String) {
 
+        // 对象的创建只能通过调用companion object声明的静态方法实现
         companion object {
 
             fun createFromInt(int: Int) = PrivateConstructorClass("Int : $int")
@@ -36,7 +45,6 @@ private object ObjectPlayground {
         }
 
         fun sayHello() = println("Hello, I am $name")
-
     }
 
     private fun playWithFactory() {
@@ -47,6 +55,10 @@ private object ObjectPlayground {
         object1.sayHello()
         object2.sayHello()
     }
+
+    //endregion companion object简单工厂
+
+    //region object匿名类
 
     private interface OnClickListener {
         fun onClick()
@@ -78,4 +90,6 @@ private object ObjectPlayground {
         }
         button.click()
     }
+
+    //endregion 匿名类
 }

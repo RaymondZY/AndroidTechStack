@@ -1,4 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
+package zhaoyun.teckstack.android.kotlin.collection
 
 fun main() {
     MapPlayground.play()
@@ -9,6 +9,8 @@ private object MapPlayground {
     fun play() {
         playWithMap()
     }
+
+    //region map
 
     private fun playWithMap() {
         println("MapPlayground.playWithMap()")
@@ -39,5 +41,7 @@ private object MapPlayground {
         println("map2[2] = ${map2[2]}")
         println("map2[3] = ${map2[3]}")
     }
+
+    //endregion map
 }
 

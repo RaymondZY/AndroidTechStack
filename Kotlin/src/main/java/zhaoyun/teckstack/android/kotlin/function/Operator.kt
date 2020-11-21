@@ -1,6 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
-
-import java.lang.IndexOutOfBoundsException
+package zhaoyun.teckstack.android.kotlin.function
 
 fun main() {
     OperatorPlayground.play()

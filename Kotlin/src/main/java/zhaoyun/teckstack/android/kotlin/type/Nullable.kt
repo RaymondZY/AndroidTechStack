@@ -1,4 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
+package zhaoyun.teckstack.android.kotlin.type
 
 fun main() {
     NullablePlayground.play()
@@ -11,9 +11,9 @@ private object NullablePlayground {
         playWithElvis()
         playWithAsQuestionMark()
         playWithExclamatoryMark()
-        playWithLet()
-        playWithLateInit()
     }
+
+    //region ?.
 
     private fun playWithQuestionMarkDot() {
         println("NullablePlayground.playWithQuestionMarkDot()")
@@ -25,6 +25,10 @@ private object NullablePlayground {
         println(s2?.length)
     }
 
+    //endregion ?.
+
+    //region ?:
+
     private fun playWithElvis() {
         println("NullablePlayground.playWithElvis()")
 
@@ -34,6 +38,10 @@ private object NullablePlayground {
         val s2: String? = "abc"
         println(s2 ?: "null string")
     }
+
+    //endregion ?:
+
+    //region as?
 
     private fun playWithAsQuestionMark() {
         println("NullablePlayground.playWithAsQuestionMark()")
@@ -48,6 +56,10 @@ private object NullablePlayground {
         println(s?.length ?: "not supported")
     }
 
+    //endregion as?
+
+    //region !!
+
     private fun playWithExclamatoryMark() {
         println("NullablePlayground.playWithExclamatoryMark()")
 
@@ -61,42 +73,5 @@ private object NullablePlayground {
          */
     }
 
-    private fun playWithLet() {
-        println("NullablePlayground.playWithLet()")
-
-        val s1: String? = "abc"
-        s1?.let {
-            println("first let")
-        }
-
-        val s2: String? = null
-        s2?.let {
-            println("second let")
-        }
-    }
-
-    class Person {
-
-        private lateinit var name: String
-
-        fun initName() {
-            name = "zhaoyun"
-        }
-
-        fun printName() {
-            println(name)
-        }
-    }
-
-    private fun playWithLateInit() {
-        println("NullablePlayground.playWithLateInit()")
-
-        val p1 = Person()
-        p1.initName()
-        p1.printName()
-
-        val p2 = Person()
-        // kotlin.UninitializedPropertyAccessException: lateinit property name has not been initialized
-        p2.printName()
-    }
+    //endregion !!
 }

@@ -1,4 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
+package zhaoyun.teckstack.android.kotlin.`class`
 
 fun main() {
     EnumPlayground.play()
@@ -9,6 +9,8 @@ private object EnumPlayground {
     fun play() {
         playWithEnum()
     }
+
+    //region enum
 
     private enum class Color(
         private val r: Int,
@@ -30,4 +32,6 @@ private object EnumPlayground {
             println("IntValue of $color is ${color.intValue()}")
         }
     }
+
+    //endregion enum
 }

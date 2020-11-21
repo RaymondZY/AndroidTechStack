@@ -10,6 +10,8 @@ private object WhenPlayground {
         playWithWhen()
     }
 
+    //region when语句
+
     private enum class Color(
         private val r: Int,
         private val g: Int,
@@ -64,4 +66,6 @@ private object WhenPlayground {
             color1 == Color.RED && color2 == Color.RED -> "red"
             else -> "unknown color"
         }
+
+    //endregion when语句
 }

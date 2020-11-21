@@ -1,4 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
+package zhaoyun.teckstack.android.kotlin.collection
 
 fun main() {
     SetPlayground.play()
@@ -10,6 +10,8 @@ private object SetPlayground {
         playWithSet()
     }
 
+    //region set
+
     private fun playWithSet() {
         println("SetPlayground.playWithSet()")
 
@@ -18,4 +20,6 @@ private object SetPlayground {
         println(set)
         println(set.javaClass)
     }
+
+    //endregion set
 }

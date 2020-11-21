@@ -1,4 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
+package zhaoyun.teckstack.android.kotlin.`class`
 
 fun main() {
     InterfacePlayground.play()
@@ -9,6 +9,8 @@ private object InterfacePlayground {
     fun play() {
         playWithInterface()
     }
+
+    //region interface
 
     private open class Student(
         // public是默认可见性，可以省略
@@ -48,7 +50,8 @@ private object InterfacePlayground {
     }
 
     // Kotlin使用:来表示Java中的extends或者implements
-    private class ComputerScienceStudent(name: String) : Student(name), Programmer, HearthStonePlayer {
+    private class ComputerScienceStudent(name: String) : Student(name), Programmer,
+        HearthStonePlayer {
 
         override fun writeProgram() {
             println("$name is writing a program")
@@ -75,4 +78,6 @@ private object InterfacePlayground {
         zhaoyun.writeProgram()
         zhaoyun.debug()
     }
+
+    //endregion interface
 }

@@ -1,4 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
+package zhaoyun.teckstack.android.kotlin.collection
 
 fun main() {
     ListPlayground.play()
@@ -10,6 +10,8 @@ private object ListPlayground {
         playWithList()
     }
 
+    //region list
+
     private fun playWithList() {
         println("ListPlayground.playWithList()")
 
@@ -17,5 +19,7 @@ private object ListPlayground {
         val list = listOf(1, 2, 3)
         println(list.javaClass)
     }
+
+    //endregion list
 }
 

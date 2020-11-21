@@ -1,4 +1,5 @@
 package zhaoyun.teckstack.android.kotlin.basic
+
 fun main() {
     IterationPlayground.play()
 }
@@ -9,6 +10,8 @@ private object IterationPlayground {
         playWithForIteration()
         playWithWhile()
     }
+
+    //region for循环
 
     private fun playWithForIteration() {
         println("IterationPlayground.playWithForIteration()")
@@ -32,6 +35,10 @@ private object IterationPlayground {
         }
     }
 
+    //endregion for循环
+
+    //region while循环
+
     private fun playWithWhile() {
         println("IterationPlayground.playWithWhile()")
 
@@ -42,5 +49,6 @@ private object IterationPlayground {
         }
     }
 
+    //endregion while循环
 }
 

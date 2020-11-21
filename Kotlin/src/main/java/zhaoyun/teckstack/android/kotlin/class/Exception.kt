@@ -1,6 +1,4 @@
-package zhaoyun.teckstack.android.kotlin.basic
-
-import java.lang.NumberFormatException
+package zhaoyun.teckstack.android.kotlin.`class`
 
 fun main() {
     ExceptionPlayground.play()
@@ -11,6 +9,8 @@ private object ExceptionPlayground {
     fun play() {
         playWithException()
     }
+
+    //region exception
 
     private fun playWithException() {
         println("ExceptionPlayground.playWithException()")
@@ -32,4 +32,5 @@ private object ExceptionPlayground {
         println(number)
     }
 
+    //endregion exception
 }
