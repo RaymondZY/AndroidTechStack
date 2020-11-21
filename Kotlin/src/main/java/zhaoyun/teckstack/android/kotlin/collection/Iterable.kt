@@ -10,7 +10,7 @@ fun main() {
     IterablePlayground.play()
 }
 
-object IterablePlayground {
+private object IterablePlayground {
 
     private data class Person(var name: String, var age: Int = 0)
 
