@@ -11,6 +11,8 @@ buildscript {
         maven {
             url rootProject.file("./build")
         }
+        google()
+        jcenter()
     }
     dependencies {
         classpath 'zhaoyun.techstack.android.transform:transform-plugin:1.0.0'
