@@ -6,17 +6,21 @@ android {
     }
 }
 
-buildscript {
-    repositories {
-        maven {
-            url rootProject.file("./build")
+try {
+    buildscript {
+        repositories {
+            maven {
+                url rootProject.file("./build")
+            }
+            google()
+            jcenter()
         }
-        google()
-        jcenter()
+        dependencies {
+            classpath 'zhaoyun.techstack.android.transform:transform-plugin:1.0.0'
+        }
     }
-    dependencies {
-        classpath 'zhaoyun.techstack.android.transform:transform-plugin:1.0.0'
-    }
+
+    apply plugin: 'transform-plugin'
+} catch (Exception ignored) {
 }
 
-apply plugin: 'transform-plugin'
