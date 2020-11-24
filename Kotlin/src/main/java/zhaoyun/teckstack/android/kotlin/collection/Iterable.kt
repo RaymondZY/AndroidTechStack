@@ -21,7 +21,11 @@ private object IterablePlayground {
         playWithFlatMap()
         playWithFlatten()
         playWithFilter()
+        playWithSum()
         playWithMaxBy()
+        playWithSumBy()
+        playWithFold()
+        playWithReduce()
         playWithSequence()
     }
 
@@ -86,6 +90,18 @@ private object IterablePlayground {
 
     //endregion filter
 
+    //region sum
+
+    private fun playWithSum() {
+        println("IterablePlayground.playWithSum()")
+
+        val list = arrayListOf(1.0, 2.0, 3.0)
+        val sum = list.sum()
+        println("sum = $sum")
+    }
+
+    //endregion sum
+
     // region maxBy
 
     private fun playWithMaxBy() {
@@ -100,6 +116,68 @@ private object IterablePlayground {
     }
 
     //endregion maxBy
+
+    //region sumBy
+
+    private fun playWithSumBy() {
+        println("IterablePlayground.playWithSumBy()")
+
+        val personList = arrayListOf(
+            Person("zhaoyun", 30),
+            Person("jianghang", 30),
+            Person("maodou", 1),
+            Person("xuxu", 9)
+        )
+        val totalAge = personList.sumBy(Person::age)
+        println("total age = $totalAge")
+    }
+
+    //endregion sumBy
+
+    //region fold
+
+    private fun playWithFold() {
+        println("IterablePlayground.playWithFold()")
+
+        val personList = arrayListOf(
+            Person("zhaoyun", 30),
+            Person("jianghang", 30),
+            Person("maodou", 1),
+            Person("xuxu", 9)
+        )
+        val totalAge = personList.fold(0) { acc, person ->
+            acc + person.age
+        }
+        val totalName = personList.fold("") { acc, person ->
+            acc + "_" + person.name
+        }.drop(1)
+        println("total age = $totalAge")
+        println("total name = $totalName")
+    }
+
+    //endregion fold
+
+    //region reduce
+
+    private fun playWithReduce() {
+        println("IterablePlayground.playWithReduce()")
+
+        val personList = arrayListOf(
+            Person("zhaoyun", 30),
+            Person("jianghang", 30),
+            Person("maodou", 1),
+            Person("xuxu", 9)
+        )
+        val combinedPerson = personList.reduce { acc, person ->
+            Person(
+                acc.name + "_" + person.name,
+                acc.age + person.age
+            )
+        }
+        println("combined person = $combinedPerson")
+    }
+
+    //endregion reduce
 
     //region sequence
 
