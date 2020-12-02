@@ -9,9 +9,6 @@ import io.reactivex.rxjava3.core.Observable
  */
 
 fun main() {
-    Temp().test {
-        println(it)
-    }
     val observable1 = Observable.create<Int> { emitter ->
         emitter.onNext(1)
         emitter.onNext(2)
