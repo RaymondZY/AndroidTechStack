@@ -15,7 +15,8 @@
             android:id="@+id/collapsingToolbarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap">
+            app:contentScrim="@mipmap/lord_of_the_rings"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -45,6 +46,7 @@
         tools:listitem="@layout/item_number" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
