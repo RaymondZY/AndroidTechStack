@@ -20,6 +20,7 @@ include ':Framework:BroadcastReceiver:sender'
 include ':Framework:Activity:BackStack:app'
 include ':Framework:Activity:BackStack:another'
 include ':Framework:Activity:ActivityLifeCycles'
+include ':Framework:Activity:ScreenOrientation'
 
 include ':Topic:Optimization:Memory'
 include ':Topic:Plugin:Hook:host'
