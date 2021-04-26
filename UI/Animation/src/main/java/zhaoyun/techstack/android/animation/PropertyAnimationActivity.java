@@ -1,10 +1,11 @@
 package zhaoyun.techstack.android.animation;
 
+import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.TextView;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PropertyAnimationActivity extends AppCompatActivity {
+
+    private static final String TAG = PropertyAnimationActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,27 @@ public class PropertyAnimationActivity extends AppCompatActivity {
                         Point point = (Point) animation.getAnimatedValue();
                         textView.setTranslationX(point.x);
                         textView.setTranslationY(point.y);
+                    });
+                    valueAnimator.addListener(new Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+                            Log.d(TAG, "PropertyAnimationActivity.onAnimationStart()");
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            Log.d(TAG, "PropertyAnimationActivity.onAnimationEnd()");
+                        }
+
+                        @Override
+                        public void onAnimationCancel(Animator animation) {
+                            Log.d(TAG, "PropertyAnimationActivity.onAnimationCancel()");
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+                            Log.d(TAG, "PropertyAnimationActivity.onAnimationRepeat()");
+                        }
                     });
                     valueAnimator.start();
                 }
